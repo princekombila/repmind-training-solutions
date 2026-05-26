@@ -1,0 +1,85 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --corp-white:  #ffffff;
+  --corp-bg:     #f8f9fa;
+  --corp-blue:   #003f7f;
+  --corp-navy:   #1a1a2e;
+  --corp-gold:   #c8a951;
+  --corp-text:   #1a1a1a;
+  --corp-muted:  #4a4a4a;
+  --corp-border: #e5e7eb;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  background: var(--corp-white);
+  color: var(--corp-text);
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  background: var(--corp-blue);
+  color: #ffffff;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar         { width: 8px; }
+::-webkit-scrollbar-track   { background: var(--corp-bg); }
+::-webkit-scrollbar-thumb   { background: var(--corp-blue); border-radius: 4px; }
+
+@layer components {
+  .container-x {
+    @apply mx-auto w-full max-w-7xl px-5 sm:px-8 lg:px-12;
+  }
+
+  /* Bouton plein bleu */
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-md bg-corp-blue px-6 py-3 font-semibold text-white transition-all hover:bg-corp-navy hover:shadow-card-hover hover:-translate-y-0.5;
+  }
+
+  /* Bouton contour bleu */
+  .btn-outline {
+    @apply inline-flex items-center justify-center gap-2 rounded-md border-2 border-corp-blue px-6 py-3 font-semibold text-corp-blue transition-all hover:bg-corp-blue hover:text-white;
+  }
+
+  /* Ancien btn-ghost conservé pour compatibilité dans Footer */
+  .btn-ghost {
+    @apply inline-flex items-center justify-center gap-2 rounded-md border-2 border-white/30 px-6 py-3 font-semibold text-white transition-all hover:border-white hover:bg-white/10;
+  }
+
+  .section-title {
+    @apply font-display text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-corp-navy;
+  }
+
+  .section-eyebrow {
+    @apply mb-3 inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.25em] text-corp-gold;
+  }
+
+  .card {
+    @apply rounded-lg border border-corp-border bg-white p-6 shadow-card transition-all hover:shadow-card-hover hover:border-corp-blue/30;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
