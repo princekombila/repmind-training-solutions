@@ -1,23 +1,32 @@
 import './globals.css';
+import Navbar from '@/components/Navbar';
+import Footer from '@/components/Footer';
 
 export const metadata = {
-  title: 'REP MIND Training Solutions | Formation Ingénieurs Nucléaires',
+  metadataBase: new URL('https://repmind.fr'),
+  title: {
+    default: 'REP Mind Training Solutions | Formation nucléaire civil',
+    template: '%s | REP Mind Training Solutions',
+  },
   description:
-    'Former les ingénieurs du nucléaire de demain. Sûreté, démantèlement, fusion, exploitation des centrales. Partenaire EDF, CEA, Orano.',
+    "Organisme de formation spécialisé dans le nucléaire civil : conception et animation de formations, e-learning et micro-eLearning, ingénierie et accompagnement pédagogique. Sûreté nucléaire, réacteurs REP/EPR, cycle du combustible, ISO 19443.",
   keywords: [
-    'formation nucléaire',
-    'ingénieur nucléaire',
-    'école nucléaire',
-    'REP MIND',
-    'EDF',
-    'CEA',
-    'Orano',
+    'formation nucléaire civil',
+    'REP Mind Training Solutions',
     'sûreté nucléaire',
-    'REP MIND Training Solutions',
+    'culture sûreté',
+    'réacteurs REP EPR',
+    'cycle du combustible',
+    'ISO 19443',
+    'e-learning nucléaire',
+    'ingénierie pédagogique',
+    'Ivan MBOME',
   ],
+  authors: [{ name: 'REP Mind Training Solutions' }],
   openGraph: {
-    title: 'REP MIND Training Solutions | Formation Ingénieurs Nucléaires',
-    description: 'Former les ingénieurs du nucléaire de demain.',
+    title: 'REP Mind Training Solutions | Formation nucléaire civil',
+    description:
+      'Former les compétences nucléaires de demain. Formations techniques, e-learning et ingénierie pédagogique pour le secteur du nucléaire civil.',
     type: 'website',
     locale: 'fr_FR',
   },
@@ -40,7 +49,11 @@ export default function RootLayout({ children }) {
           rel="stylesheet"
         />
       </head>
-      <body>{children}</body>
+      <body>
+        <Navbar />
+        {children}
+        <Footer />
+      </body>
     </html>
   );
 }
