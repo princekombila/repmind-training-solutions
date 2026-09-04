@@ -68,9 +68,9 @@ export default function ConceptionAnimationPage() {
   return (
     <main>
       <PageHeader
-        eyebrow="Nos activités — Choix 1"
+        eyebrow="Activités 1"
         title="Conception & animation de formations"
-        lead="Nous concevons et animons des formations adaptées aux besoins spécifiques de nos partenaires industriels, établissements d'enseignement et organismes de formation."
+        lead="Nous concevons et animons des formations adaptées aux besoins spécifiques de nos partenaires : entreprises, établissements d'enseignement supérieur et centres de formation."
         breadcrumb={[{ label: 'Nos activités', href: '/nos-activites' }, { label: 'Conception & animation' }]}
       />
 

@@ -23,7 +23,7 @@ const STEPS = [
   },
   {
     title: 'Construction du plan de formation',
-    text: "Sur la base de l'audit, nous co-construisons un plan annuel ou pluriannuel — votre feuille de route formation, présentable à votre direction, vos partenaires sociaux ou vos donneurs d'ordre.",
+    text: "Sur la base de l'audit, nous co-construisons un plan annuel ou pluriannuel, votre feuille de route formation, présentable à votre direction, vos partenaires sociaux ou vos donneurs d'ordre.",
     items: [
       "Les thématiques à couvrir et leur ordre de déploiement",
       "Le choix des formats : présentiel, eLearning, micro-learning ou combinaison",

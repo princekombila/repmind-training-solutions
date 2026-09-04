@@ -16,7 +16,7 @@ export const ACTIVITY_CARDS = [
     icon: MonitorPlay,
     href: '/nos-activites/elearning-micro-elearning',
     title: 'E-learning & micro-eLearning',
-    text: 'Solutions pédagogiques numériques engageantes et conformes aux normes SCORM / xAPI, du cadrage du besoin au module finalisé.',
+    text: 'Solutions pédagogiques numériques engageantes et respectant les exigences des normes SCORM et xAPI, du cadrage du besoin au module finalisé.',
     tags: ['SCORM / xAPI', 'Micro-learning', 'LMS'],
   },
   {
@@ -24,7 +24,7 @@ export const ACTIVITY_CARDS = [
     icon: Compass,
     href: '/nos-activites/accompagnement-pedagogique',
     title: 'Accompagnement & ingénierie pédagogique',
-    text: "La construction d'un dispositif de formation complet, structuré et autonome — de l'audit des besoins jusqu'à votre pleine autonomie.",
+    text: "La construction d'un dispositif de formation complet, structuré et autonome, de l'audit des besoins jusqu'à votre pleine autonomie.",
     tags: ['Audit', 'Plan de formation', 'Autonomie'],
   },
 ];

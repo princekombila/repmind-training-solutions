@@ -1,4 +1,4 @@
-import { Building2, GraduationCap, Lightbulb } from 'lucide-react';
+import { Building2, GraduationCap } from 'lucide-react';
 import Reveal from './Reveal';
 
 const AUDIENCES = [
@@ -12,11 +12,6 @@ const AUDIENCES = [
     title: 'Enseignement supérieur',
     text: "Nous intervenons auprès des écoles, universités et centres de formation pour préparer les futurs talents du nucléaire et diffuser les connaissances liées aux enjeux énergétiques et industriels.",
   },
-  {
-    icon: Lightbulb,
-    title: 'Une pédagogie moderne',
-    text: "Notre approche est rigoureuse, interactive et directement connectée aux réalités industrielles du terrain : rendre le nucléaire plus accessible, plus concret et plus efficacement transmissible.",
-  },
 ];
 
 export default function About() {
@@ -29,14 +24,16 @@ export default function About() {
             Un partenaire de formation dédié au nucléaire civil.
           </h2>
           <p className="mt-5 text-lg text-corp-muted leading-relaxed">
-            REP Mind Training Solutions est une entreprise spécialisée dans la formation
-            professionnelle du secteur du nucléaire civil. Nos contenus sont construits à
-            partir du retour d'expérience industriel, des exigences du secteur et des
-            pratiques actuelles de la filière.
+            Un partenaire de formation dédié au service de l'excellence du nucléaire. REP Mind
+            Training Solutions est une entreprise spécialisée dans la formation professionnelle
+            et l'ingénierie pédagogique. Nos modules et parcours de formation sont conçus au plus
+            près du terrain : ils intègrent le retour d'expérience (REX) industriel, répondent
+            aux exigences strictes du secteur et s'alignent sur les pratiques actuelles des
+            professionnels de la filière.
           </p>
         </Reveal>
 
-        <div className="mt-14 grid gap-6 md:grid-cols-3">
+        <div className="mt-14 grid gap-6 md:grid-cols-2">
           {AUDIENCES.map((a, i) => (
             <Reveal key={a.title} delay={i * 90} className="card">
               <div className="grid h-12 w-12 place-items-center rounded-md bg-corp-blue/10">

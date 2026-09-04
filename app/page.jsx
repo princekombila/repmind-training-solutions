@@ -1,5 +1,6 @@
 import Hero3D from '@/components/Hero3D';
 import About from '@/components/About';
+import ModernPedagogy from '@/components/ModernPedagogy';
 import Founder from '@/components/Founder';
 import ExpertiseDomains from '@/components/ExpertiseDomains';
 import ActivitiesOverview from '@/components/ActivitiesOverview';
@@ -10,6 +11,7 @@ export default function HomePage() {
     <main className="relative min-h-screen">
       <Hero3D />
       <About />
+      <ModernPedagogy />
       <Founder />
       <ExpertiseDomains />
       <ActivitiesOverview />

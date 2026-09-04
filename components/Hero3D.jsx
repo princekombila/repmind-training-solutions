@@ -11,7 +11,6 @@ import { MAILTO } from '@/lib/contact';
 const Atom = dynamic(() => import('./Atom'), { ssr: false });
 
 export default function Hero3D() {
-  const eyebrowRef = useRef(null);
   const titleRef = useRef(null);
   const subRef = useRef(null);
   const ctaRef = useRef(null);
@@ -20,8 +19,7 @@ export default function Hero3D() {
   useEffect(() => {
     const ctx = gsap.context(() => {
       const tl = gsap.timeline({ defaults: { ease: 'power3.out' } });
-      tl.from(eyebrowRef.current, { y: 30, opacity: 0, duration: 0.7 })
-        .from(titleRef.current, { y: 50, opacity: 0, duration: 1 }, '-=0.3')
+      tl.from(titleRef.current, { y: 50, opacity: 0, duration: 1 })
         .from(subRef.current, { y: 30, opacity: 0, duration: 0.8 }, '-=0.5')
         .from(ctaRef.current?.children || [], { y: 20, opacity: 0, duration: 0.6, stagger: 0.1 }, '-=0.4')
         .from(badgesRef.current?.children || [], { y: 20, opacity: 0, duration: 0.5, stagger: 0.08 }, '-=0.3');
@@ -48,25 +46,20 @@ export default function Hero3D() {
 
       <div className="container-x relative flex min-h-[100svh] flex-col justify-center pt-28 pb-20 md:pt-32">
         <div className="max-w-3xl">
-          <div ref={eyebrowRef} className="section-eyebrow">
-            <span className="inline-block h-[2px] w-6 bg-corp-gold rounded-full" />
-            REP Mind Training Solutions
-          </div>
-
           <h1
             ref={titleRef}
             className="font-display text-4xl sm:text-5xl md:text-7xl lg:text-[5.25rem] font-bold leading-[0.98] tracking-tight"
           >
             <span className="block text-corp-navy">Former les compétences</span>
             <span className="block text-corp-blue">nucléaires</span>
-            <span className="block text-corp-gold">de demain.</span>
+            <span className="block text-corp-gold">de demain</span>
           </h1>
 
           <p ref={subRef} className="mt-6 max-w-2xl text-lg md:text-xl text-corp-muted leading-relaxed">
-            Organisme de formation spécialisé dans le nucléaire civil. Nous développons
+            Cabinet de formation et d'ingénierie pédagogique spécialisé dans le nucléaire civil. Nous développons
             les compétences des entreprises de la chaîne d'approvisionnement nucléaire et
-            accompagnons les établissements d'enseignement supérieur — avec une pédagogie
-            moderne, rigoureuse et connectée aux réalités industrielles du terrain.
+            accompagnons les établissements d'enseignement supérieur avec une pédagogie
+            moderne, rigoureuse et connectée aux réalités de la filière.
           </p>
 
           <div ref={ctaRef} className="mt-8 flex flex-wrap items-center gap-3">
@@ -85,12 +78,20 @@ export default function Hero3D() {
           >
             <span className="flex items-center gap-1.5">
               <ShieldCheck className="h-3.5 w-3.5 text-corp-gold" />
-              Sûreté & culture sûreté
+              Réacteurs REP et EPR
             </span>
-            <span className="h-1 w-1 rounded-full bg-corp-border" />
-            <span>Réacteurs REP & EPR</span>
-            <span className="h-1 w-1 rounded-full bg-corp-border" />
-            <span>Sûreté-qualité ISO 19443</span>
+            <span className="flex items-center gap-1.5">
+              <ShieldCheck className="h-3.5 w-3.5 text-corp-gold" />
+              Sûreté nucléaire
+            </span>
+            <span className="flex items-center gap-1.5">
+              <ShieldCheck className="h-3.5 w-3.5 text-corp-gold" />
+              Règlementation INB
+            </span>
+            <span className="flex items-center gap-1.5">
+              <ShieldCheck className="h-3.5 w-3.5 text-corp-gold" />
+              Management de la sûreté – qualité
+            </span>
           </div>
         </div>
 

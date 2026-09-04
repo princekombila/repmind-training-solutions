@@ -76,9 +76,9 @@ export default function ELearningPage() {
   return (
     <main>
       <PageHeader
-        eyebrow="Nos activités — Choix 2"
+        eyebrow="Activités 2"
         title="E-learning & micro-eLearning"
-        lead="Nous développons des solutions pédagogiques numériques pour faciliter l'apprentissage et le maintien des compétences — une méthode rigoureuse, de votre besoin au module finalisé."
+        lead="Nous développons des solutions pédagogiques numériques pour faciliter l'apprentissage et le maintien des compétences. Une méthode rigoureuse, de votre besoin au module finalisé."
         breadcrumb={[{ label: 'Nos activités', href: '/nos-activites' }, { label: 'E-learning & micro-eLearning' }]}
       />
 
